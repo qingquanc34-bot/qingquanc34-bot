@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>陈清泉 - 个人简历</title>
+  <style>
+    /* ==================== 全局样式 ==================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Microsoft YaHei', 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      text-align: center;
+      scroll-behavior: smooth;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Segoe UI Semibold', 'Microsoft YaHei Bold';
+      letter-spacing: 1px;
+    }
+
+    section {
+      padding: 120px 15%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ==================== 顶部导航 ==================== */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 80px;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-size: 30px;
+    }
+
+    nav a {
+      margin-left: 40px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #00e0ff;
+    }
+
+    /* ==================== 首页 ==================== */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 54px;
+      margin-bottom: 20px;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .hero p {
+      font-size: 22px;
+      color: #cfd8dc;
+      max-width: 800px;
+      line-height: 1.8;
+      animation: fadeIn 2s ease;
+    }
+
+    .btn {
+      margin-top: 40px;
+      padding: 14px 40px;
+      border: none;
+      border-radius: 30px;
+      font-size: 20px;
+      color: #fff;
+      background: linear-gradient(45deg, #00e0ff, #009fff);
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.07);
+      box-shadow: 0 0 25px #00e0ff;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ==================== 内容块统一风格 ==================== */
+    .content-box {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 60px 40px;
+      max-width: 1000px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      margin-bottom: 40px;
+      transition: 0.3s;
+    }
+
+    .content-box:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 30px rgba(0, 224, 255, 0.3);
+    }
+
+    .content-box h2 {
+      font-size: 36px;
+      color: #00e0ff;
+      margin-bottom: 30px;
+    }
+
+    .content-box p, .content-box li {
+      font-size: 20px;
+      color: #e0e0e0;
+      line-height: 1.8;
+      list-style: none;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .skill {
+      background: linear-gradient(45deg, #00e0ff33, #009fff33);
+      border-radius: 30px;
+      padding: 15px 25px;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .skill:hover {
+      background: linear-gradient(45deg, #00e0ff, #009fff);
+      color: #fff;
+      transform: scale(1.1);
+    }
+
+    footer {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(8px);
+      padding: 30px;
+      font-size: 16px;
+      color: #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 顶部导航 -->
+  <header>
+    <h1>陈清泉</h1>
+    <nav>
+      <a href="#home">首页</a>
+      <a href="#about">关于我</a>
+      <a href="#achievements">成就与项目</a>
+      <a href="#skills">技能</a>
+      <a href="#contact">联系我</a>
+    </nav>
+  </header>
+
+  <!-- 首页 -->
+  <section id="home" class="hero">
+    <h2>欢迎来到我的个人简历主页</h2>
+    <p>我是湖北工业大学计算机科学与技术专业学生，团支书，中共党员。热爱编程、创新与实践，用代码创造更智能的世界。</p>
+    <button class="btn" onclick="document.querySelector('#about').scrollIntoView({behavior:'smooth'})">开始浏览</button>
+  </section>
+
+  <!-- 关于我 -->
+  <section id="about">
+    <div class="content-box">
+      <h2>关于我</h2>
+      <p>🎓 学校：湖北工业大学</p>
+      <p>🧭 专业：计算机科学与技术</p>
+      <p>💼 职务：团支书</p>
+      <p>🧠 政治面貌：中共党员</p>
+      <p>💬 兴趣：编程、算法、篮球、乒乓球</p>
+    </div>
+  </section>
+
+  <!-- 成就与项目 -->
+  <section id="achievements">
+    <div class="content-box">
+      <h2>成就与项目</h2>
+      <ul>
+        <li>🏆 <strong>中国大学生工程实践与创新能力大赛 - 飞行器仿真专项赛</strong><br>
+          参与协同对抗虚拟仿真演练，航空救援任务得分：<strong>91.278分</strong>。
+        </li><br>
+        <li>💻 <strong>停车场管理系统（C++）</strong><br>
+          实现车牌识别、停车时长、收费计算、操作日志记录与数据分析。
+        </li><br>
+        <li>🤖 <strong>茶叶智能分选系统（PyTorch + YOLOv5）</strong><br>
+          基于深度学习实现茶叶图像识别与分级，支持目标检测与分类。
+        </li><br>
+        <li>🌐 <strong>Web开发与算法项目</strong><br>
+          熟悉 HTML/CSS/JS 前端开发，掌握 Python 数据分析与机器学习。
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 技能 -->
+  <section id="skills">
+    <div class="content-box">
+      <h2>技能</h2>
+      <div class="skills">
+        <div class="skill">C / C++</div>
+        <div class="skill">Python</div>
+        <div class="skill">HTML / CSS / JavaScript</div>
+        <div class="skill">PyTorch / YOLOv5</div>
+        <div class="skill">STM32 嵌入式开发</div>
+        <div class="skill">团队协作与项目管理</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系方式 -->
+  <section id="contact">
+    <div class="content-box">
+      <h2>联系我</h2>
+      <p>📧 邮箱：example@email.com</p>
+      <p>💬 微信：your_wechat</p>
+      <p>📍 湖北 · 武汉</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 陈清泉 | 用代码与梦想创造未来
+  </footer>
+</body>
+</html>
